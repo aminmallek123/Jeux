@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQB973QFsw5llwHfAVRV5ffd_0JoY4KIo2Ww&usqp=CAU">
+  <title>Lucky Spin App Example</title>
+ 
+</head>
+
+<body onload="load()">
+  <div class="input-group">
+    <input type="text" class="form-control" id="aj" placeholder="Entrer les players" aria-label="Entrer les players">
+    <button class="btn btn-outline-secondary" onclick="ajouter()" type="button">Ajouter</button><br>
+    <button class="btn btn-outline-secondary"  onclick="jouer()" type="button">Jouer</button><br>
+    <button class="btn btn-outline-secondary"  onclick="remove()" type="button">Remove</button><br>
+  </div>
+  <div class="mainbox" id="mainbox">
+    <div class="box" id="box">
+      <div class="box1">
+        <span class="font span1"><b>games</b></span>
+        <span class="font span2"><b>games</b></span>
+        <span class="font span3"><b>games</b></span>
+        <span class="font span4"><b>games</b></span>
+        <span class="font span5"><b>games <br />
+          </b></span>
+      </div>
+      <div class="box2">
+        <span class="font span1"><b>games</b></span>
+        <span class="font span2"><b>games <br />
+            </b></span>
+        <span class="font span3"><b>games</b></span>
+        <span class="font span4"><b>games</b></span>
+        <span class="font span5"><b> games<br />
+          </b></span>
+      </div>
+    </div>
+    <button class="spin" id="jr" disabled onclick="spin()">SPIN</button>
+  </div>
+  <audio controls="controls" id="applause" src="./applause.mp3" type="audio/mp3"></audio>
+  <audio controls="controls" id="wheel" src="./wheel.mp3" type="audio/mp3"></audio>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="script.js"></script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <script>
+    try {
+      fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function (response) {
+        return true;
+      }).catch(function (e) {
+        var carbonScript = document.createElement("script");
+        carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+        carbonScript.id = "_carbonads_js";
+        document.getElementById("carbon-block").appendChild(carbonScript);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  </script>
+</body>
+
+</html>
